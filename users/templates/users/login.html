@@ -1,0 +1,24 @@
+{% extends "todo/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div style="margin-top: 100px;" class="ui container">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="ui segment">
+                <legend class="ui header">Log in</legend>
+                {{form | crispy }}
+            </fieldset>
+            <div>
+                <button class="ui button blue">Login</button>
+            </div>
+        </form>
+        <div class="border-top">
+            <small>
+                Need an account? <a href="{% url 'register' %}">Sign up!</a>
+            </small>
+        </div>
+    </div>
+    <center>
+        <p style="margin-top: 180px;">Created by Kamil Safaryjski 2023</p>
+    </center>
+{% endblock content %}

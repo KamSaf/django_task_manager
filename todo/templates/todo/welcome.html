@@ -1,0 +1,6 @@
+{% extends "todo/about.html" %}
+{% block button %}
+    <center>
+        <a style="margin-top: 50px;" class="ui button blue" {% if user.is_authenticated %} href="{% url 'users_todos' user  %}" {% else %} href="{% url 'login' %}" {% endif %}>Get started!</a>
+    </center>
+{% endblock button %}

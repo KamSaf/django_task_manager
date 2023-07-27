@@ -1,0 +1,15 @@
+{% extends "todo/base.html" %}
+{% block content %}
+    <div style="margin-top: 150px;" class="ui container">
+        <h1  class = "ui center aligned header"> Django Task Manager</h1>
+    </div>
+    <center>
+        {% block button %}{% endblock button %}
+        <div style="margin-top: 100px;" class="ui container">
+            <p  class = "ui center aligned header"> Basic web app designed to keep track of all your tasks! 😎</p>
+            <p  class = "ui center aligned paragraph"> Powered by Python (Django) and Semantic UI.</p>
+        </div>
+        <p style="margin-top: 180px;">Created by Kamil Safaryjski 2023</p>
+    </center>
+    
+{% endblock content %}
